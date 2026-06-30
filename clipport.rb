@@ -5,20 +5,20 @@
 class Clipport < Formula
   desc "Cross-platform shared clipboard over TCP"
   homepage "https://github.com/tsyche/clipport"
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tsyche/clipport/releases/download/v0.1.4/clipport_Darwin_x86_64.tar.gz"
-      sha256 "2244ef1b542bf0cefce1e6e24ca02079557521877f34d42b5d68021bb357d3c5"
+      url "https://github.com/tsyche/clipport/releases/download/v0.1.5/clipport_Darwin_x86_64.tar.gz"
+      sha256 "d7538f56381ff9e66334bdd086bab973399dcc80c65f14f8e1b7d10ee40811b9"
 
       define_method(:install) do
         bin.install "clipport"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tsyche/clipport/releases/download/v0.1.4/clipport_Darwin_arm64.tar.gz"
-      sha256 "f619250f5f3c9a6eca0ea4997d4af95e2c3f12e9463e7bea8bf3589affa7669b"
+      url "https://github.com/tsyche/clipport/releases/download/v0.1.5/clipport_Darwin_arm64.tar.gz"
+      sha256 "1059b449244304cc5e7850368affed515a68ff36d4e434d973613d382212cea2"
 
       define_method(:install) do
         bin.install "clipport"
@@ -28,22 +28,22 @@ class Clipport < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsyche/clipport/releases/download/v0.1.4/clipport_Linux_x86_64.tar.gz"
-      sha256 "0a84f69a759fff83c048381eb8402a1cb3e097f1103bb9f1693a7f7a4055f5ed"
+      url "https://github.com/tsyche/clipport/releases/download/v0.1.5/clipport_Linux_x86_64.tar.gz"
+      sha256 "3851299741cdc1449ec0eff149301211a05bb6aa5a0f4e68ae067ccd6f30311e"
       define_method(:install) do
         bin.install "clipport"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/tsyche/clipport/releases/download/v0.1.4/clipport_Linux_arm.tar.gz"
-      sha256 "ed901b7b55cadf0612947bca3491f1757c5b9468a47c4f90d2ef3595dae2721f"
+      url "https://github.com/tsyche/clipport/releases/download/v0.1.5/clipport_Linux_arm.tar.gz"
+      sha256 "5074c1c3884b02b5b62be7a8371d914276222ab26ea6c07562f3fa3ffea761b8"
       define_method(:install) do
         bin.install "clipport"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsyche/clipport/releases/download/v0.1.4/clipport_Linux_arm64.tar.gz"
-      sha256 "a3a70d531b2ae9e4767753dd8b8007a2a0b25c5827cb53bba46c5f9f8f23a2fb"
+      url "https://github.com/tsyche/clipport/releases/download/v0.1.5/clipport_Linux_arm64.tar.gz"
+      sha256 "d0442907adee11011c4f127cca5f40b8c34e9ed8a909348e513f21f8266967b9"
       define_method(:install) do
         bin.install "clipport"
       end
